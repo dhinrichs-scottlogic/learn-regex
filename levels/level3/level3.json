@@ -1,0 +1,42 @@
+{
+    "a.c": {
+        "match": "abc",
+        "mismatch": ["bac", "aaa"]
+    },
+    "...": {
+        "match": "123",
+        "mismatch": ["12", "1234"]
+    },
+    ".a": {
+        "match": "1a",
+        "mismatch": ["a1", "11"]
+    },
+    "b.t": {
+        "match": "bat",
+        "mismatch": ["cat", "dog"]
+    },
+    "O.O": {
+        "match": "O_O",
+        "mismatch": ["O", ".."]
+    },
+    ".xyz": {
+        "match": "1xyz",
+        "mismatch": ["xyz1", "x1yz"]
+    },
+    "l.t": {
+        "match": "let",
+        "mismatch": ["var", "int"]
+    },
+    ".@": {
+        "match": "1@",
+        "mismatch": ["@1", "__"]
+    },
+    "fo.": {
+        "match": "for",
+        "mismatch": ["boo", "bar"]
+    },
+    ".%": {
+        "match": "1%",
+        "mismatch": ["%1", "11"]
+    }
+}

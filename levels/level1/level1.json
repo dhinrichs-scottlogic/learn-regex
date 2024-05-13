@@ -1,0 +1,42 @@
+{
+    "^abc": {
+        "match": "abcd",
+        "mismatch": ["bcd", "aab"]
+    },
+    "^...": {
+        "match": "...profit!",
+        "mismatch": ["step three:", "step 1..."]
+    },
+    "^a": {
+        "match": "a)",
+        "mismatch": ["b)", "ha"]
+    },
+    "^01": {
+        "match": "011",
+        "mismatch": ["101", "110"]
+    },
+    "^#": {
+        "match": "#yolo",
+        "mismatch": ["n#1", "_#2"]
+    },
+    "^xyz": {
+        "match": "xyz123",
+        "mismatch": ["yzx", "zxy"]
+    },
+    "^123": {
+        "match": "123abc",
+        "mismatch": ["abc", "312"]
+    },
+    "^@": {
+        "match": "@username",
+        "mismatch": ["user@email", "c@"]
+    },
+    "^foo": {
+        "match": "foo",
+        "mismatch": ["bar", "const foo"]
+    },
+    "^%": {
+        "match": "%discount",
+        "mismatch": ["o/o", "di%scount"]
+    }
+}

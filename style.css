@@ -1,0 +1,35 @@
+body {
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    font-family: Arial, sans-serif;    
+}
+
+p {
+    font-size: 24px;
+}
+
+nav {
+    position: absolute;
+    bottom: 40%;
+    height: 10%;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+a {
+    padding: 2em 3em;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+a:hover {
+    background-color: #e9e9e9;
+}
