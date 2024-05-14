@@ -1,59 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../exercises.css">
-    <title>Regex Game Level 1</title>
-    <script src="../utils.js"></script>
-</head>
-<body>
-    <div id="game-over">GAME OVER</div>
-    <div id="success-message">
-        <p>SUCCESS 🏆</p>
-        <a href="../level4/level4.html">next level</a>
-    </div>
-    <!-- <button onclick="startGame()" id="start-button">start game</button> -->
-    <div class="control-bar">
-        <div id="lives">❤️❤️❤️</div>
-        <div class="buttons-container">
-            <div class=button-and-number>
-                <button id="btn1"></button>
-                <div class="keyboard-key">1</div>
-            </div>
-            <div class=button-and-number>
-                <button id="btn2"></button>
-                <div class="keyboard-key">2</div>
-            </div>
-            <div class=button-and-number>
-                <button id="btn3"></button>
-                <div class="keyboard-key">3</div>
-            </div>
-        </div>
-        <div id="score-points">
-            <div id="progress-wrapper"><div id="progress-bar"></div></div>
-        </div>
-    </div>
-    <!-- <script>
-        const blockSpeed = 0.3;
+window.onload = function() {
+const blockSpeed = 0.3;
         let currentRegex='';
         let currentMatch='';
         let currentMismatch='';
-        let currentExplanation='';
         let lives = 3;
         let scorePoints = 0;
-
-        let blockPosition = 0;
         let isFalling = true;
 
         document.getElementById('game-over').style.display = 'none';
         document.getElementById('success-message').style.display = 'none';
 
+        const url = window.location.href;
+        const levelNumber = url[url.length - 6];    
+        const path = `./level${levelNumber}.json`;
+
         async function getRegexData() {
-            const response = await fetch('level3.json');
+            const response = await fetch(path);
             const data = await response.json();
             const keys = Object.keys(data);
             const randomKey = keys[Math.floor(Math.random() * keys.length)];
+            console.log("hi");
             return {regex: randomKey, ...data[randomKey]};
         }
 
@@ -159,7 +125,7 @@
                     let button1 = document.getElementById('btn1');
                     button1.style.backgroundColor = '#fff';
                     setTimeout(function() {
-                        button1.style.backgroundColor = '#ddd';
+                        button1.style.backgroundColor = '#f0f0f0';
                     }, 100);
                     break;
                 case '2':
@@ -167,7 +133,7 @@
                     let button2 = document.getElementById('btn2');
                     button2.style.backgroundColor = '#fff';
                     setTimeout(function() {
-                        button2.style.backgroundColor = '#ddd';
+                        button2.style.backgroundColor = '#f0f0f0';
                     }, 100);
                     break;
                 case '3':
@@ -175,7 +141,7 @@
                     let button3 = document.getElementById('btn3');
                     button3.style.backgroundColor = '#fff';
                     setTimeout(function() {
-                        button3.style.backgroundColor = '#ddd';
+                        button3.style.backgroundColor = '#f0f0f0';
                     }, 100);
                     break;
                 default:
@@ -188,7 +154,4 @@
                 isFalling = !isFalling;
             }
         });
-
-    </script> -->
-</body>
-</html>
+};
