@@ -1,0 +1,242 @@
+{
+    "level1": {
+        "title": "Level 1",
+        "symbol": "^",
+        "description": [
+            "The caret symbol (^) is used to match the beginning of a string.",
+            "For example, the regex ^cat will match any string that starts with the word 'cat'."
+        ],
+        "examples": [
+            "^cat will match 'cat', 'cats', 'caterpillar', etc.",
+            "^dog will not match 'hotdog', 'underdog', etc."
+        ]
+    },
+    "level2": {
+        "title": "Level 2",
+        "symbol": "$",
+        "description": [
+            "The dollar symbol ($) is used to match the end of a string.",
+            "For example, the regex cat$ will match any string that ends with the word 'cat'."
+        ],
+        "examples": [
+            "cat$ will match 'cat', 'acat', 'my cat', etc.",
+            "dog$ will not match 'doggy', 'doghouse', etc."
+        ]
+    },
+    "level3": {
+        "title": "Level 3",
+        "symbol": ".",
+        "description": [
+            "The dot symbol (.) matches any single character except newline.",
+            "For example, the regex c.t will match 'cat', 'cot', 'cut', etc."
+        ],
+        "examples": [
+            "c.t will match 'cat', 'cot', 'cut', etc.",
+            "c.t will not match 'caterpillar', 'ct', etc."
+        ]
+    },
+    "level4": {
+        "title": "Level 4",
+        "symbol": "*",
+        "description": [
+            "The asterisk symbol (*) matches zero or more occurrences of the preceding element.",
+            "For example, the regex ca*t will match 'cat', 'caaat', 'ct', etc."
+        ],
+        "examples": [
+            "ca*t will match 'cat', 'caaat', 'ct', etc.",
+            "ca*t will not match 'cabt', 'caaaatx', etc."
+        ]
+    },
+    "level5": {
+        "title": "Level 5",
+        "symbol": "+",
+        "description": [
+            "The plus symbol (+) matches one or more occurrences of the preceding element.",
+            "For example, the regex ca+t will match 'cat', 'caaat', but not 'ct'."
+        ],
+        "examples": [
+            "ca+t will match 'cat', 'caaat', etc.",
+            "ca+t will not match 'ct', 'c', etc."
+        ]
+    },
+    "level6": {
+        "title": "Level 6",
+        "symbol": "?",
+        "description": [
+            "The question mark symbol (?) matches zero or one occurrence of the preceding element.",
+            "For example, the regex ca?t will match 'cat' and 'ct'."
+        ],
+        "examples": [
+            "ca?t will match 'cat' and 'ct'.",
+            "ca?t will not match 'caaat'."
+        ]
+    },
+    "level7": {
+        "title": "Level 7",
+        "symbol": "[ ]",
+        "description": [
+            "Square brackets ([ ]) are used to define a character class.",
+            "For example, the regex [aeiou] will match any vowel."
+        ],
+        "examples": [
+            "[aeiou] will match 'a', 'e', 'i', 'o', 'u'.",
+            "[aeiou] will not match 'b', 'c', 'd', etc."
+        ]
+    },
+    "level8": {
+        "title": "Level 8",
+        "symbol": "|",
+        "description": [
+            "The pipe symbol (|) is used for alternation (logical OR).",
+            "For example, the regex cat|dog will match 'cat' or 'dog'."
+        ],
+        "examples": [
+            "cat|dog will match 'cat' or 'dog'.",
+            "cat|dog will not match 'bat', 'pig', etc."
+        ]
+    },
+    "level9": {
+        "title": "Level 9",
+        "symbol": "\\d",
+        "description": [
+            "The \\d symbol matches any digit (equivalent to [0-9]).",
+            "For example, the regex \\d will match any single digit."
+        ],
+        "examples": [
+            "\\d will match '0', '1', '2', '3', etc.",
+            "\\d will not match 'a', 'b', 'c', etc."
+        ]
+    },
+    "level10": {
+        "title": "Level 10",
+        "symbol": "\\w",
+        "description": [
+            "The \\w symbol matches any word character (alphanumeric and underscore).",
+            "For example, the regex \\w will match any single word character."
+        ],
+        "examples": [
+            "\\w will match 'a', 'b', 'c', '1', '2', '_', etc.",
+            "\\w will not match '@', '#', '$', etc."
+        ]
+    },
+    "level11": {
+        "title": "Level 11",
+        "symbol": "\\W",
+        "description": [
+            "The \\W symbol matches any non-word character.",
+            "For example, the regex \\W will match any character that is not a letter, digit, or underscore."
+        ],
+        "examples": [
+            "\\W will match '@', '#', '$', etc.",
+            "\\W will not match 'a', 'b', 'c', '1', '2', '_', etc."
+        ]
+    },
+    "level12": {
+        "title": "Level 12",
+        "symbol": "\\s",
+        "description": [
+            "The \\s symbol matches any whitespace character (spaces, tabs, line breaks).",
+            "For example, the regex \\s will match a space, tab, or newline."
+        ],
+        "examples": [
+            "\\s will match ' ', '\\t', '\\n', etc.",
+            "\\s will not match 'a', '1', '@', etc."
+        ]
+    },
+    "level13": {
+        "title": "Level 13",
+        "symbol": "\\S",
+        "description": [
+            "The \\S symbol matches any non-whitespace character.",
+            "For example, the regex \\S will match any character that is not a space, tab, or newline."
+        ],
+        "examples": [
+            "\\S will match 'a', '1', '@', etc.",
+            "\\S will not match ' ', '\\t', '\\n', etc."
+        ]
+    },
+    "level14": {
+        "title": "Level 14",
+        "symbol": "\\b",
+        "description": [
+            "The \\b symbol matches a word boundary.",
+            "For example, the regex \\bword\\b will match 'word' surrounded by non-word characters or boundaries."
+        ],
+        "examples": [
+            "\\bword\\b will match 'word' in 'word is here', but not in 'swordfish'.",
+            "\\bword will not match 'sword', 'wordy' in 'keyboard'."
+        ]
+    },
+    "level15": {
+        "title": "Level 15",
+        "symbol": "\\B",
+        "description": [
+            "The \\B symbol matches a non-word boundary.",
+            "For example, the regex \\Bword\\B will match 'word' within other word characters."
+        ],
+        "examples": [
+            "\\Bword\\B will match 'swordfish', but not 'word is here'.",
+            "\\Bword\\B will not match 'word', 'world'."
+        ]
+    },
+    "level16": {
+        "title": "Level 16",
+        "symbol": "{n}",
+        "description": [
+            "The {n} symbol matches exactly n occurrences of the preceding element.",
+            "For example, the regex a{3} will match exactly three 'a' characters in a row."
+        ],
+        "examples": [
+            "a{3} will match 'aaa'.",
+            "a{3} will not match 'aa', 'aaaa'."
+        ]
+    },
+    "level17": {
+        "title": "Level 17",
+        "symbol": "{n,}",
+        "description": [
+            "The {n,} symbol matches at least n occurrences of the preceding element.",
+            "For example, the regex a{2,} will match two or more 'a' characters in a row."
+        ],
+        "examples": [
+            "a{2,} will match 'aa', 'aaa', 'aaaa', etc.",
+            "a{2,} will not match 'a'."
+        ]
+    },
+    "level18": {
+        "title": "Level 18",
+        "symbol": "{n,m}",
+        "description": [
+            "The {n,m} symbol matches between n and m occurrences of the preceding element.",
+            "For example, the regex a{2,4} will match two, three, or four 'a' characters in a row."
+        ],
+        "examples": [
+            "a{2,4} will match 'aa', 'aaa', 'aaaa'.",
+            "a{2,4} will not match 'a', 'aaaaa'."
+        ]
+    },
+    "level19": {
+        "title": "Level 19",
+        "symbol": "(group)",
+        "description": [
+            "Parentheses (()) are used to create groups.",
+            "For example, the regex (abc) will match 'abc' and allow for grouping."
+        ],
+        "examples": [
+            "(abc) will match 'abc'.",
+            "(abc) will not match 'ab', 'abcd'."
+        ]
+    },
+    "level20": {
+        "title": "Level 20",
+        "symbol": "(?:group)",
+        "description": [
+            "The (?:) syntax creates a non-capturing group.",
+            "For example, the regex (?:abc) will match 'abc' but not capture it."
+        ],
+        "examples": [
+            "(?:abc) will match 'abc'.",
+            "(?:abc) will not match 'ab', 'abcd'."
+        ]
+    }
+}

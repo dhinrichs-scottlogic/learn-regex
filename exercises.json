@@ -1,0 +1,922 @@
+{
+    "level 1" : {
+        "lesson" : "^",
+        "explanation" : "The caret symbol (^) is used to match the beginning of a string.",
+        "examples" : {
+            "^abc": {
+                "match": "abcd",
+                "mismatch": ["bcd", "aab"]
+            },
+            "^...": {
+                "match": "...profit!",
+                "mismatch": ["step three:", "step 1..."]
+            },
+            "^a": {
+                "match": "a)",
+                "mismatch": ["b)", "ha"]
+            },
+            "^01": {
+                "match": "011",
+                "mismatch": ["101", "110"]
+            },
+            "^#": {
+                "match": "#yolo",
+                "mismatch": ["n#1", "_#2"]
+            },
+            "^xyz": {
+                "match": "xyz123",
+                "mismatch": ["yzx", "zxy"]
+            },
+            "^123": {
+                "match": "123abc",
+                "mismatch": ["abc", "312"]
+            },
+            "^@": {
+                "match": "@username",
+                "mismatch": ["user@email", "c@"]
+            },
+            "^foo": {
+                "match": "foo",
+                "mismatch": ["bar", "const foo"]
+            },
+            "^%": {
+                "match": "%discount",
+                "mismatch": ["o/o", "di%scount"]
+            }
+        }    
+    },
+    "level 2": {
+        "lesson": "$",
+        "explanation": "The dollar symbol ($) is used to match the end of a string.",
+        "examples": {
+            "abc$": {
+                "match": "myabc",
+                "mismatch": ["abcde", "cab"]
+            },
+            "...$": {
+                "match": "profit...",
+                "mismatch": ["...steps", "three... step"]
+            },
+            "a$": {
+                "match": "banana",
+                "mismatch": ["apple", "aardvark"]
+            },
+            "01$": {
+                "match": "4501",
+                "mismatch": ["013", "1101"]
+            },
+            "#$": {
+                "match": "number #",
+                "mismatch": ["#number", "hash#"]
+            },
+            "xyz$": {
+                "match": "123xyz",
+                "mismatch": ["xyzzy", "yxz"]
+            },
+            "123$": {
+                "match": "abc123",
+                "mismatch": ["1234", "123abc"]
+            },
+            "@$": {
+                "match": "email@",
+                "mismatch": ["@email", "user@site"]
+            },
+            "foo$": {
+                "match": "barfoo",
+                "mismatch": ["fooled", "food"]
+            },
+            "%$": {
+                "match": "increase%",
+                "mismatch": ["%growth", "percent%more"]
+            }
+        }
+    },
+    "level 3": {
+        "lesson": ".",
+        "explanation": "The dot symbol (.) matches any single character except newline.",
+        "examples": {
+            "a.c": {
+                "match": "abc",
+                "mismatch": ["ac", "abbc"]
+            },
+            "b..d": {
+                "match": "bond",
+                "mismatch": ["bd", "bonded"]
+            },
+            ".e.": {
+                "match": "rex",
+                "mismatch": ["reex", "xe"]
+            },
+            "1.3": {
+                "match": "123",
+                "mismatch": ["13", "1234"]
+            },
+            "#.$": {
+                "match": "r#.",
+                "mismatch": ["#", "r#n"]
+            },
+            "xyz.": {
+                "match": "xyz1",
+                "mismatch": ["xyz", "xyz11"]
+            },
+            "123.": {
+                "match": "123a",
+                "mismatch": ["123", "12345"]
+            },
+            "@.": {
+                "match": "@a",
+                "mismatch": ["@", "@aa"]
+            },
+            "foo.": {
+                "match": "food",
+                "mismatch": ["foo", "foood"]
+            },
+            "%.": {
+                "match": "%2",
+                "mismatch": ["%", "%23"]
+            }
+        }
+    },
+    "level 4": {
+        "lesson": "*",
+        "explanation": "The asterisk symbol (*) matches zero or more occurrences of the preceding element.",
+        "examples": {
+            "a*b": {
+                "match": "ab",
+                "mismatch": ["acb", "ba"]
+            },
+            "bo*d": {
+                "match": "bd",
+                "mismatch": ["bod", "bodd"]
+            },
+            ".a*": {
+                "match": ".aaa",
+                "mismatch": ["a", ".a."]
+            },
+            "3*7": {
+                "match": "37",
+                "mismatch": ["347", "733"]
+            },
+            "#*#": {
+                "match": "####",
+                "mismatch": ["#a#", "##a"]
+            },
+            "xyz*": {
+                "match": "xyzzzzz",
+                "mismatch": ["xyyz", "xyx"]
+            },
+            "123*": {
+                "match": "1233333",
+                "mismatch": ["1234", "1223"]
+            },
+            "@*": {
+                "match": "@@@@@",
+                "mismatch": ["@a@", "@@@"]
+            },
+            "foo*": {
+                "match": "foooooo",
+                "mismatch": ["foob", "foa"]
+            },
+            "%*": {
+                "match": "%%%%%",
+                "mismatch": ["%a%", "%1%"]
+            }
+        }
+    },
+    "level 5": {
+        "lesson": "+",
+        "explanation": "The plus symbol (+) matches one or more occurrences of the preceding element.",
+        "examples": {
+            "a+b": {
+                "match": "aab",
+                "mismatch": ["ab", "acb"]
+            },
+            "bo+d": {
+                "match": "boood",
+                "mismatch": ["bd", "bod"]
+            },
+            ".a+": {
+                "match": ".aaaa",
+                "mismatch": [".a", ".aa."]
+            },
+            "3+7": {
+                "match": "3337",
+                "mismatch": ["37", "33347"]
+            },
+            "#+#": {
+                "match": "#++#",
+                "mismatch": ["##", "#a#"]
+            },
+            "xyz+": {
+                "match": "xyzzz",
+                "mismatch": ["xyz", "xyyz"]
+            },
+            "123+": {
+                "match": "1233",
+                "mismatch": ["123", "1234123"]
+            },
+            "@+": {
+                "match": "@@@",
+                "mismatch": ["@", "@a@"]
+            },
+            "foo+": {
+                "match": "foooo",
+                "mismatch": ["foo", "foob"]
+            },
+            "%+": {
+                "match": "%%%%",
+                "mismatch": ["%", "%a%"]
+            }
+        }
+    },
+    "level 6": {
+        "lesson": "?",
+        "explanation": "The question mark symbol (?) matches zero or one occurrence of the preceding element.",
+        "examples": {
+            "a?b": {
+                "match": "ab",
+                "mismatch": ["aab", "bb"]
+            },
+            "bo?d": {
+                "match": "bd",
+                "mismatch": ["bod", "bood"]
+            },
+            ".a?": {
+                "match": ".a",
+                "mismatch": [".aa", ".aaa"]
+            },
+            "3?7": {
+                "match": "37",
+                "mismatch": ["377", "3"]
+            },
+            "#?#": {
+                "match": "##",
+                "mismatch": ["#", "#a#"]
+            },
+            "xyz?": {
+                "match": "xyz",
+                "mismatch": ["xyzz", "xy"]
+            },
+            "123?": {
+                "match": "123",
+                "mismatch": ["1233", "12"]
+            },
+            "@?": {
+                "match": "@",
+                "mismatch": ["@@", "a@"]
+            },
+            "foo?": {
+                "match": "foo",
+                "mismatch": ["fooo", "fo"]
+            },
+            "%?": {
+                "match": "%",
+                "mismatch": ["%%", "%%5"]
+            }
+        }
+    },
+    "level 7": {
+        "lesson": "[]",
+        "explanation": "Square brackets ([]) are used to define a character class, allowing any single character from a specified set.",
+        "examples": {
+            "[abc]": {
+                "match": "a",
+                "mismatch": ["d", "e"]
+            },
+            "[0-9]+": {
+                "match": "123",
+                "mismatch": ["abc", "xyz"]
+            },
+            "gr[ae]y": {
+                "match": "gray",
+                "mismatch": ["gry", "grey"]
+            },
+            "e[xyz]": {
+                "match": "ex",
+                "mismatch": ["ea", "ezz"]
+            },
+            "[A-Z]": {
+                "match": "Z",
+                "mismatch": ["a", "z"]
+            },
+            "[^abc]": {
+                "match": "d",
+                "mismatch": ["a", "b"]
+            },
+            "[^0-9]": {
+                "match": "a",
+                "mismatch": ["1", "2"]
+            },
+            "[a-c][1-3]": {
+                "match": "b2",
+                "mismatch": ["d4", "c0"]
+            },
+            "[!@#]$": {
+                "match": "#",
+                "mismatch": ["$", "%"]
+            },
+            "[1-3]{2}": {
+                "match": "11",
+                "mismatch": ["12", "23"]
+            }
+        }
+    },
+    "level 8": {
+        "lesson": "|",
+        "explanation": "The pipe symbol (|) is used for alternation (logical OR), allowing a match against any one of the expressions separated by the pipe.",
+        "examples": {
+            "cat|dog": {
+                "match": "cat",
+                "mismatch": ["bat", "dig"]
+            },
+            "blue|green|red": {
+                "match": "green",
+                "mismatch": ["grey", "black"]
+            },
+            "(yes|no)": {
+                "match": "yes",
+                "mismatch": ["maybe", "perhaps"]
+            },
+            "1|2": {
+                "match": "2",
+                "mismatch": ["12", "3"]
+            },
+            "left|right": {
+                "match": "left",
+                "mismatch": ["center", "middle"]
+            },
+            "apple|banana": {
+                "match": "banana",
+                "mismatch": ["berry", "kiwi"]
+            },
+            "sun|moon|stars": {
+                "match": "moon",
+                "mismatch": ["planet", "sky"]
+            },
+            "high|low": {
+                "match": "high",
+                "mismatch": ["medium", "average"]
+            },
+            "man|woman": {
+                "match": "woman",
+                "mismatch": ["boy", "girl"]
+            },
+            "on|off": {
+                "match": "on",
+                "mismatch": ["none", "in"]
+            }
+        }
+    },
+    "level 9": {
+        "lesson": "\\d",
+        "explanation": "The backslash-d (\\d) symbol matches any digit, which is equivalent to [0-9].",
+        "examples": {
+            "\\d": {
+                "match": "2",
+                "mismatch": ["a", "x"]
+            },
+            "\\d+": {
+                "match": "12345",
+                "mismatch": ["abc", "none"]
+            },
+            "1\\d1": {
+                "match": "151",
+                "mismatch": ["111", "1212"]
+            },
+            "code\\d": {
+                "match": "code9",
+                "mismatch": ["code", "codex"]
+            },
+            "\\d\\d\\d": {
+                "match": "007",
+                "mismatch": ["00", "0123"]
+            },
+            "year\\d{4}": {
+                "match": "year2024",
+                "mismatch": ["year202", "year24"]
+            },
+            "A\\dA": {
+                "match": "A2A",
+                "mismatch": ["AAA", "A22A"]
+            },
+            "\\d%": {
+                "match": "5%",
+                "mismatch": ["%", "percent"]
+            },
+            "No.\\d": {
+                "match": "No.1",
+                "mismatch": ["No.", "Number1"]
+            },
+            "zip\\d{5}": {
+                "match": "zip12345",
+                "mismatch": ["zip1234", "zip123456"]
+            }
+        }
+    },
+    "level 10": {
+        "lesson": "\\w",
+        "explanation": "The backslash-w (\\w) symbol matches any word character, including letters, digits, and the underscore, equivalent to [a-zA-Z0-9_].",
+        "examples": {
+            "\\w": {
+                "match": "a",
+                "mismatch": ["?", "."]
+            },
+            "\\w+": {
+                "match": "hello123",
+                "mismatch": ["hello-123", "no_way!"]
+            },
+            "A\\wZ": {
+                "match": "ABZ",
+                "mismatch": ["A-Z", "A B Z"]
+            },
+            "\\w\\w\\w": {
+                "match": "abc",
+                "mismatch": ["ab1", "a!c"]
+            },
+            "id_\\w+": {
+                "match": "id_variable",
+                "mismatch": ["id-", "id variable"]
+            },
+            "\\w*": {
+                "match": "word123_",
+                "mismatch": ["word 123_", "word-123"]
+            },
+            "end\\w": {
+                "match": "end1",
+                "mismatch": ["end-", "end "]
+            },
+            "user_\\w": {
+                "match": "user_a",
+                "mismatch": ["user-", "user 1"]
+            },
+            "\\w%": {
+                "match": "5%",
+                "mismatch": ["%5", "%"]
+            },
+            "num\\w{3}": {
+                "match": "num123",
+                "mismatch": ["num12", "num1234"]
+            }
+        }
+    },
+     "level 11": {
+        "lesson": "\\W",
+        "explanation": "The backslash-W (\\W) symbol matches any non-word character, which includes punctuation, spaces, and other symbols not part of [a-zA-Z0-9_].",
+        "examples": {
+            "\\W": {
+                "match": "@",
+                "mismatch": ["a", "1"]
+            },
+            "\\W+": {
+                "match": "!!!",
+                "mismatch": ["word", "123"]
+            },
+            "a\\Wz": {
+                "match": "a z",
+                "mismatch": ["az", "aAz"]
+            },
+            "3\\W3": {
+                "match": "3-3",
+                "mismatch": ["333", "3 3"]
+            },
+            "\\W\\W\\W": {
+                "match": "@#$",
+                "mismatch": ["abc", "123"]
+            },
+            "end\\W": {
+                "match": "end!",
+                "mismatch": ["end1", "ends"]
+            },
+            "text\\W": {
+                "match": "text?",
+                "mismatch": ["texta", "text1"]
+            },
+            "100\\W%": {
+                "match": "100%",
+                "mismatch": ["100", "100p"]
+            },
+            "(space)\\W": {
+                "match": "(space) ",
+                "mismatch": ["(space)S", "(space)s"]
+            },
+            "no\\Wchar": {
+                "match": "no-char",
+                "mismatch": ["nochar", "no_char"]
+            }
+        }
+    },
+    "level 12": {
+        "lesson": "\\s",
+        "explanation": "The backslash-s (\\s) symbol matches any whitespace character, including spaces, tabs, and newline characters.",
+        "examples": {
+            "\\s": {
+                "match": " ",
+                "mismatch": ["a", "_"]
+            },
+            "\\s+": {
+                "match": "   ",
+                "mismatch": ["word", "123"]
+            },
+            "hello\\sworld": {
+                "match": "hello world",
+                "mismatch": ["helloworld", "hello_world"]
+            },
+            "line\\sbreak": {
+                "match": "line\nbreak",
+                "mismatch": ["linebreak", "line-break"]
+            },
+            "tab\\scharacter": {
+                "match": "tab\tcharacter",
+                "mismatch": ["tabcharacter", "tab_character"]
+            },
+            "space\\s*here": {
+                "match": "space   here",
+                "mismatch": ["spacehere", "space_here"]
+            },
+            "end\\swith\\sspace": {
+                "match": "end with space",
+                "mismatch": ["endswithspace", "endwith space"]
+            },
+            "2\\snumbers": {
+                "match": "2 numbers",
+                "mismatch": ["2numbers", "2_numbers"]
+            },
+            "open\\sbrace": {
+                "match": "open (brace",
+                "mismatch": ["open(brace", "open_brace"]
+            },
+            "\\s{2}": {
+                "match": "  ",
+                "mismatch": [" ", "   "]
+            }
+        }
+    },
+    "level 13": {
+        "lesson": "\\S",
+        "explanation": "The backslash-S (\\S) symbol matches any non-whitespace character, which includes letters, digits, punctuation, and other symbols.",
+        "examples": {
+            "\\S": {
+                "match": "a",
+                "mismatch": [" ", "\t"]
+            },
+            "\\S+": {
+                "match": "hello_world",
+                "mismatch": ["   ", "\n\t"]
+            },
+            "text\\S": {
+                "match": "text!",
+                "mismatch": ["text ", "text\n"]
+            },
+            "non\\Swhitespace": {
+                "match": "non-whitespace",
+                "mismatch": ["non whitespace", "non\nwhitespace"]
+            },
+            "\\S\\S\\S": {
+                "match": "123",
+                "mismatch": ["1 3", "12 "]
+            },
+            "123\\S": {
+                "match": "123a",
+                "mismatch": ["123 ", "123\t"]
+            },
+            "end\\Sline": {
+                "match": "end;line",
+                "mismatch": ["end line", "end  line"]
+            },
+            "use\\S\\S": {
+                "match": "use@#",
+                "mismatch": ["use  ", "use\n\n"]
+            },
+            "\\S{2}": {
+                "match": "@@",
+                "mismatch": ["@ ", " @"]
+            },
+            "word\\Sword": {
+                "match": "word-word",
+                "mismatch": ["word word", "word  word"]
+            }
+        }
+    },
+    "level 14": {
+        "lesson": "\\b",
+        "explanation": "The backslash-b (\\b) symbol matches a word boundary. This includes spaces, punctuation, and the edges of a string if they border word characters.",
+        "examples": {
+            "\\bcat\\b": {
+                "match": "The cat sat.",
+                "mismatch": ["locate", "concatenate"]
+            },
+            "hello\\b": {
+                "match": "hello ",
+                "mismatch": ["helloa", "hello1"]
+            },
+            "\\bword": {
+                "match": " word",
+                "mismatch": ["sword", "keywords"]
+            },
+            "fun\\b": {
+                "match": "It was fun!",
+                "mismatch": ["function", "fundamental"]
+            },
+            "\\b123\\b": {
+                "match": "123 are numbers",
+                "mismatch": ["a123", "123a"]
+            },
+            "\\b!\\b": {
+                "match": " ! ",
+                "mismatch": ["!!", "a!b"]
+            },
+            "end\\b": {
+                "match": "The end",
+                "mismatch": ["ended", "endless"]
+            },
+            "\\bapi\\b": {
+                "match": "An api call",
+                "mismatch": ["capitol", "napkin"]
+            },
+            "\\bno\\b": {
+                "match": "yes or no?",
+                "mismatch": ["know", "unknown"]
+            },
+            "stop\\b": {
+                "match": "stop, drop, and roll",
+                "mismatch": ["stopwatch", "nonstop"]
+            }
+        }
+    },
+    "level 15": {
+        "lesson": "\\B",
+        "explanation": "The backslash-B (\\B) symbol matches a position where there is not a word boundary. It is used to find matches within the interiors of words.",
+        "examples": {
+            "\\Bend\\B": {
+                "match": "weekend trip",
+                "mismatch": ["end", "The end."]
+            },
+            "o\\B": {
+                "match": "chocolate",
+                "mismatch": ["potato ", "out"]
+            },
+            "t\\Bt": {
+                "match": "attempt",
+                "mismatch": ["tart", "tint"]
+            },
+            "\\Bam\\B": {
+                "match": "program",
+                "mismatch": ["am", "amend"]
+            },
+            "\\B123\\B": {
+                "match": "a123b",
+                "mismatch": ["123", " 123 "]
+            },
+            "\\Bfun\\B": {
+                "match": "fundamental",
+                "mismatch": ["fun", "in fun we trust"]
+            },
+            "in\\B": {
+                "match": "within",
+                "mismatch": ["in ", "pin "]
+            },
+            "en\\B": {
+                "match": "taken",
+                "mismatch": ["en route", "en."]
+            },
+            "\\Bis\\B": {
+                "match": "crisis",
+                "mismatch": ["is", "this is it"]
+            },
+            "\\Bless\\B": {
+                "match": "blessing",
+                "mismatch": ["less", "bless "]
+            }
+        }
+    },
+     "level 16": {
+        "lesson": "{n}",
+        "explanation": "The curly braces {n} symbol is used to specify exactly n occurrences of the preceding element.",
+        "examples": {
+            "a{3}": {
+                "match": "aaa",
+                "mismatch": ["aa", "aaaa"]
+            },
+            "1{4}": {
+                "match": "1111",
+                "mismatch": ["111", "11111"]
+            },
+            "ho{2}": {
+                "match": "hoo",
+                "mismatch": ["ho", "hooo"]
+            },
+            "\\d{5}": {
+                "match": "12345",
+                "mismatch": ["1234", "123456"]
+            },
+            "z{2}": {
+                "match": "zz",
+                "mismatch": ["z", "zzz"]
+            },
+            "b{3}": {
+                "match": "bbb",
+                "mismatch": ["bb", "bbbb"]
+            },
+            "x{1}": {
+                "match": "x",
+                "mismatch": ["", "xx"]
+            },
+            "s{6}": {
+                "match": "ssssss",
+                "mismatch": ["sssss", "sssssss"]
+            },
+            "(ha){2}": {
+                "match": "haha",
+                "mismatch": ["ha", "hahahaha"]
+            },
+            "\\s{3}": {
+                "match": "   ",
+                "mismatch": ["  ", "    "]
+            }
+        }
+    },
+    "level 17": {
+        "lesson": "{n,}",
+        "explanation": "The curly braces {n,} symbol is used to specify that the preceding element must appear at least n times.",
+        "examples": {
+            "a{2,}": {
+                "match": "aa",
+                "mismatch": ["a", "aaa"]
+            },
+            "1{3,}": {
+                "match": "111",
+                "mismatch": ["11", "1111"]
+            },
+            "ho{1,}": {
+                "match": "ho",
+                "mismatch": ["h", "hoo"]
+            },
+            "\\d{4,}": {
+                "match": "1234",
+                "mismatch": ["123", "12345"]
+            },
+            "z{2,}": {
+                "match": "zz",
+                "mismatch": ["z", "zzz"]
+            },
+            "b{3,}": {
+                "match": "bbb",
+                "mismatch": ["bb", "bbbb"]
+            },
+            "x{5,}": {
+                "match": "xxxxx",
+                "mismatch": ["xxxx", "xxxxxx"]
+            },
+            "s{4,}": {
+                "match": "ssss",
+                "mismatch": ["sss", "sssss"]
+            },
+            "(ha){2,}": {
+                "match": "haha",
+                "mismatch": ["ha", "hahahaha"]
+            },
+            "\\s{3,}": {
+                "match": "   ",
+                "mismatch": ["  ", "    "]
+            }
+        }
+    },
+    "level 18": {
+        "lesson": "{n,m}",
+        "explanation": "The curly braces {n,m} symbol is used to specify that the preceding element must appear at least n times but no more than m times.",
+        "examples": {
+            "a{2,4}": {
+                "match": "aa",
+                "mismatch": ["a", "aaaaa"]
+            },
+            "1{3,5}": {
+                "match": "111",
+                "mismatch": ["11", "111111"]
+            },
+            "ho{1,2}": {
+                "match": "ho",
+                "mismatch": ["hoo", "h"]
+            },
+            "\\d{4,6}": {
+                "match": "1234",
+                "mismatch": ["123", "1234567"]
+            },
+            "z{2,3}": {
+                "match": "zz",
+                "mismatch": ["z", "zzzz"]
+            },
+            "b{3,5}": {
+                "match": "bbb",
+                "mismatch": ["bb", "bbbbbb"]
+            },
+            "x{5,7}": {
+                "match": "xxxxx",
+                "mismatch": ["xxxx", "xxxxxxxx"]
+            },
+            "s{4,6}": {
+                "match": "ssss",
+                "mismatch": ["sss", "sssssss"]
+            },
+            "(ha){2,4}": {
+                "match": "haha",
+                "mismatch": ["ha", "hahahahaha"]
+            },
+            "\\s{3,5}": {
+                "match": "   ",
+                "mismatch": ["  ", "      "]
+            }
+        }
+    },
+     "level 19": {
+        "lesson": "(group)",
+        "explanation": "Parentheses (()) are used to create capture groups in regular expressions. This allows parts of the pattern to be used as a unit for applying quantifiers or for capturing matches for further processing.",
+        "examples": {
+            "(abc)": {
+                "match": "abc",
+                "mismatch": ["ab", "abcd"]
+            },
+            "(123)+": {
+                "match": "123123",
+                "mismatch": ["1234", "123456"]
+            },
+            "a(bc)d": {
+                "match": "abcd",
+                "mismatch": ["acd", "abbc"]
+            },
+            "(hello){2}": {
+                "match": "hellohello",
+                "mismatch": ["hello", "hellohellohello"]
+            },
+            "1(23)4": {
+                "match": "1234",
+                "mismatch": ["124", "12344"]
+            },
+            "(\\d{3})+": {
+                "match": "123123",
+                "mismatch": ["123", "1234"]
+            },
+            "(xyz|abc)": {
+                "match": "xyz",
+                "mismatch": ["x", "yz"]
+            },
+            "(\\w+)@(\\w+)": {
+                "match": "name@company",
+                "mismatch": ["name@", "@company"]
+            },
+            "(ba)+": {
+                "match": "bababa",
+                "mismatch": ["baab", "babaab"]
+            },
+            "(\\d)\\1": {
+                "match": "11",
+                "mismatch": ["12", "13"]
+            }
+        }
+    },
+    "level 20": {
+        "lesson": "(?:group)",
+        "explanation": "The (?:...) syntax creates a non-capturing group in regular expressions. This allows you to group elements together to apply quantifiers or other operations without capturing the group for back-referencing, optimizing performance when you don’t need to extract data.",
+        "examples": {
+            "(?:abc)": {
+                "match": "abc",
+                "mismatch": ["ab", "abcd"]
+            },
+            "(?:123)+": {
+                "match": "123123",
+                "mismatch": ["1234", "123456"]
+            },
+            "a(?:bc)d": {
+                "match": "abcd",
+                "mismatch": ["acd", "abbc"]
+            },
+            "(?:hello){2}": {
+                "match": "hellohello",
+                "mismatch": ["hello", "hellohellohello"]
+            },
+            "1(?:23)4": {
+                "match": "1234",
+                "mismatch": ["124", "12344"]
+            },
+            "(?:\\d{3})+": {
+                "match": "123123",
+                "mismatch": ["123", "1234"]
+            },
+            "(?:xyz|abc)": {
+                "match": "xyz",
+                "mismatch": ["x", "yz"]
+            },
+            "(?:\\w+)@(?:\\w+)": {
+                "match": "name@company",
+                "mismatch": ["name@", "@company"]
+            },
+            "(?:ba)+": {
+                "match": "bababa",
+                "mismatch": ["baab", "babaab"]
+            },
+            "(?:f|un)f": {
+                "match": "funf",
+                "mismatch": ["fuf", "unnf"]
+            }
+        }
+    }
+}

@@ -15,55 +15,57 @@ body {
     border: 1px solid #ddd;
 }
 
-#userInput {
-    position: absolute; 
-    bottom: 5vh;
-    left: 40vw;
-    font-size: 18px;
-    border: 1px solid #333;
-    padding: 5px;
-}
-
-button {
+.selection-buttons {
     padding: 0.5em 1em;
-    font-size: 24px;
+    font-size: 1.5em;
     width: 9em;
-    height: 50px;
+    min-height: 2.5em;
     border: 1.5px solid #bbb;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-button:active {
+.selection-buttons:active {
     background-color: #fff;
 }
 
-.control-bar {
+.header-bar {
     display: grid;
-    background-color: #C7C7C7;
-    grid-template-columns: 25% auto 25%;
+    grid-template-columns: 30% auto 30%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     width: 100vw;
-    border-top: dashed #999 8px;
-    padding: 2vh 0;
 }
 
 #lives {
-    grid-column: 1;
+    grid-column: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 1.7em;
     opacity: 0.8;
 }
 
 .buttons-container {
-    grid-column: 2;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #C7C7C7;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 2vh 0;
+    border-top: dashed #999 0.5rem;
+}
+
+.button-and-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
 }
 
 #score-points {
@@ -75,7 +77,7 @@ button:active {
 }
 
 #progress-wrapper {
-    width: 50%;
+    width: 70%;
     background-color: #e0e9ef;
     border: 1.5px solid #bbb;
     display: flex;
@@ -83,33 +85,27 @@ button:active {
 
 #progress-bar {
   width: 0%;
-  height: 20px;
+  height: 2em;
   background-color: #01ADB7;
 }
 
-.button-and-number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
-}
 
 .keyboard-key {
     padding: 0.2em 0.8em;
     border: outset 4px #333;
     box-shadow: inset 0 0 3px #111;
-    border-radius: 2px;
+    border-radius: 4%;
     font-family: 'Lucida Console', Geneva, Helvetica, Arial, sans-serif;
     color: white;
     background:  linear-gradient(140deg, #555, #444, #333, #222, #666, #111);   
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 #game-over {
     width: 50vw;
-    height: 50vh;
+    height: 30vh;
     background-color: #ddd;
-    border: 10px solid rgb(196, 21, 101);
+    border: 0.24em solid rgb(196, 21, 101);
     margin-left: auto;
     margin-right: auto;
     display: none;
@@ -119,13 +115,13 @@ button:active {
     box-shadow: rgba(196, 21, 101, 0.1) 10px 10px, rgba(196, 21, 101, 0.1) 20px 20px;
     z-index: 1;
     position: absolute;
-    top: 10vh;
+    top: 20vh;
     left: 25vw;
 }
 
 #success-message {
     width: 50vw;
-    height: 50vh;
+    height: 30vh;
     background-color: #C7FFC7;;
     margin-left: auto;
     margin-right: auto;
@@ -137,13 +133,13 @@ button:active {
     box-shadow: rgba(0, 255, 0, 0.1) 10px 10px, rgba(0, 255, 0, 0.1) 20px 20px;
     z-index: 1;
     position: absolute;
-    top: 10vh;
+    top: 20vh;
     left: 25vw;
-    font-size: 70px;
+    font-size: 3rem;
 }
 
-a {
-    font-size: 24px;
+.next-level {
+    font-size: 0.5;
     background-color: #C7FFC7;
     border: 3px double #B7EFB7;
     width: 50%;
@@ -153,6 +149,20 @@ a {
     align-items: center;
 }
 
-a:hover {
+.next-level:hover {
     background-color: #B7EFB7;
+}
+
+#back-link {
+    background-color: #D7D7D7;
+    padding:1em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    grid-column: 1;
+}
+
+#back-link:hover {
+    background-color: #D7E7E7;
 }
