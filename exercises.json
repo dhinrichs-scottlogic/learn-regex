@@ -158,8 +158,8 @@
                 "mismatch": ["347", "733"]
             },
             "#*#": {
-                "match": "####",
-                "mismatch": ["#a#", "##a"]
+                "match": "###",
+                "mismatch": ["#a", "##a"]
             },
             "xyz*": {
                 "match": "xyzzzzz",
@@ -167,19 +167,19 @@
             },
             "123*": {
                 "match": "1233333",
-                "mismatch": ["1234", "1223"]
+                "mismatch": ["124", "1223"]
             },
             "@*": {
                 "match": "@@@@@",
-                "mismatch": ["@a@", "@@@"]
+                "mismatch": ["@a@", "hi@hello"]
             },
             "foo*": {
                 "match": "foooooo",
                 "mismatch": ["foob", "foa"]
             },
             "%*": {
-                "match": "%%%%%",
-                "mismatch": ["%a%", "%1%"]
+                "match": "%",
+                "mismatch": ["%a", "1"]
             }
         }
     },
