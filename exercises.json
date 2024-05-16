@@ -99,25 +99,25 @@
                 "match": "abc",
                 "mismatch": ["ac", "abbc"]
             },
-            "b..d": {
-                "match": "bond",
-                "mismatch": ["james", "fond"]
+            "c.t": {
+                "match": "cat",
+                "mismatch": ["rat", "act"]
             },
-            ".e.": {
-                "match": "rex",
-                "mismatch": ["reex", "xe"]
+            ".1": {
+                "match": "#1",
+                "mismatch": ["#2", "12"]
             },
             "1.3": {
                 "match": "123",
                 "mismatch": ["13", "321"]
             },
-            "...": {
-                "match": "wow",
-                "mismatch": ["wowza", "wo"]
+            "n.1": {
+                "match": "n#1",
+                "mismatch": ["_", "1"]
             },
             "xyz.": {
                 "match": "xyz1",
-                "mismatch": ["xyz", "xyz11"]
+                "mismatch": ["xyz", "yyy"]
             },
             "123.": {
                 "match": "123a",
@@ -125,7 +125,7 @@
             },
             "@.": {
                 "match": "@a",
-                "mismatch": ["@", "#aa"]
+                "mismatch": ["ha@", "#aa"]
             },
             "foo.": {
                 "match": "food",
