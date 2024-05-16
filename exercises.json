@@ -145,21 +145,21 @@
                 "match": "ac",
                 "mismatch": ["bc", "ccc"]
             },
-            "bo*d": {
-                "match": "bd",
-                "mismatch": ["bod", "bodd"]
+            "ac*t": {
+                "match": "at",
+                "mismatch": ["cat", "ta"]
             },
-            ".a*": {
-                "match": ".aaa",
-                "mismatch": ["a", ".a."]
+            "10*": {
+                "match": "1",
+                "mismatch": ["11", "01"]
             },
             "3*7": {
-                "match": "37",
-                "mismatch": ["347", "733"]
+                "match": "337",
+                "mismatch": ["347", "3"]
             },
-            "#*#": {
-                "match": "###",
-                "mismatch": ["#a", "##a"]
+            "#*yolo": {
+                "match": "yolo",
+                "mismatch": ["@yolo", "lol"]
             },
             "xyz*": {
                 "match": "xyzzzzz",
@@ -170,16 +170,16 @@
                 "mismatch": ["124", "1223"]
             },
             "@*": {
-                "match": "@@@@@",
-                "mismatch": ["@a@", "hi@hello"]
+                "match": "@",
+                "mismatch": ["#", "a@"]
             },
-            "foo*": {
-                "match": "foooooo",
-                "mismatch": ["foob", "foa"]
+            "fo*": {
+                "match": "foo",
+                "mismatch": ["far", "of"]
             },
-            "%*": {
-                "match": "%",
-                "mismatch": ["%a", "1"]
+            "1*": {
+                "match": "11",
+                "mismatch": ["-1", "01"]
             }
         }
     },
