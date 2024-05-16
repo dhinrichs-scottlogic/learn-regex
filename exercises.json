@@ -7,13 +7,13 @@
                 "match": "abcd",
                 "mismatch": ["bcd", "aab"]
             },
-            "^...": {
-                "match": "...profit!",
-                "mismatch": ["step three:", "step 1..."]
+            "^foo": {
+                "match": "foo bar",
+                "mismatch": ["bar", "bar foo"]
             },
             "^a": {
-                "match": "a)",
-                "mismatch": ["b)", "ha"]
+                "match": "apple",
+                "mismatch": ["orange", "ha"]
             },
             "^01": {
                 "match": "011",
@@ -32,16 +32,16 @@
                 "mismatch": ["abc", "312"]
             },
             "^@": {
-                "match": "@username",
+                "match": "@fyp",
                 "mismatch": ["user@email", "c@"]
             },
-            "^foo": {
-                "match": "foo",
-                "mismatch": ["bar", "const foo"]
+            "^int": {
+                "match": "integer",
+                "mismatch": ["Integer", "hint"]
             },
             "^%": {
                 "match": "%discount",
-                "mismatch": ["o/o", "di%scount"]
+                "mismatch": ["50%", "di%scount"]
             }
         }    
     },
@@ -141,9 +141,9 @@
         "lesson": "*",
         "explanation": "The asterisk symbol (*) matches zero or more occurrences of the preceding element.",
         "examples": {
-            "a*b": {
-                "match": "ab",
-                "mismatch": ["acb", "ba"]
+            "ab*c": {
+                "match": "ac",
+                "mismatch": ["bc", "ccc"]
             },
             "bo*d": {
                 "match": "bd",
@@ -195,13 +195,13 @@
                 "match": "boood",
                 "mismatch": ["bd", "bod"]
             },
-            ".a+": {
-                "match": ".aaaa",
-                "mismatch": [".a", ".aa."]
+            "ba+": {
+                "match": "baaaa",
+                "mismatch": ["bo", "b"]
             },
             "3+7": {
-                "match": "3337",
-                "mismatch": ["37", "33347"]
+                "match": "37",
+                "mismatch": ["357", "3"]
             },
             "#+#": {
                 "match": "#++#",
