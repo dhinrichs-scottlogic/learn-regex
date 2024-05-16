@@ -50,12 +50,12 @@
         "explanation": "The dollar symbol ($) is used to match the end of a string.",
         "examples": {
             "abc$": {
-                "match": "myabc",
+                "match": "testabc",
                 "mismatch": ["abcde", "cab"]
             },
             "...$": {
                 "match": "profit...",
-                "mismatch": ["...steps", "three... step"]
+                "mismatch": ["...step two", "step one:"]
             },
             "a$": {
                 "match": "banana",
@@ -63,19 +63,19 @@
             },
             "01$": {
                 "match": "4501",
-                "mismatch": ["013", "1101"]
+                "mismatch": ["013", "45011"]
             },
             "#$": {
                 "match": "number #",
-                "mismatch": ["#number", "hash#"]
+                "mismatch": ["#number", "number #1"]
             },
             "xyz$": {
                 "match": "123xyz",
-                "mismatch": ["xyzzy", "yxz"]
+                "mismatch": ["xyzzy", "abcxyz123"]
             },
-            "123$": {
-                "match": "abc123",
-                "mismatch": ["1234", "123abc"]
+            "ra$": {
+                "match": "capybara",
+                "mismatch": ["rat", "capybaras"]
             },
             "@$": {
                 "match": "email@",
@@ -83,11 +83,11 @@
             },
             "foo$": {
                 "match": "barfoo",
-                "mismatch": ["fooled", "food"]
+                "mismatch": ["food", "foobar"]
             },
             "%$": {
-                "match": "increase%",
-                "mismatch": ["%growth", "percent%more"]
+                "match": "100%",
+                "mismatch": ["%es", "10% more"]
             }
         }
     },
