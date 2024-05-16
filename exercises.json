@@ -53,9 +53,9 @@
                 "match": "testabc",
                 "mismatch": ["abcde", "cab"]
             },
-            "...$": {
-                "match": "profit...",
-                "mismatch": ["...step two", "step one:"]
+            ";$": {
+                "match": "int x=0;",
+                "mismatch": ["i<10", "; and"]
             },
             "a$": {
                 "match": "banana",
@@ -82,7 +82,7 @@
                 "mismatch": ["@email", "user@site"]
             },
             "foo$": {
-                "match": "barfoo",
+                "match": "bar foo",
                 "mismatch": ["food", "foobar"]
             },
             "%$": {
