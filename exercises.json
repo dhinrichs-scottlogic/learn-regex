@@ -341,9 +341,9 @@
                 "match": "gray",
                 "mismatch": ["gry", "grey"]
             },
-            "e[xyz]": {
-                "match": "ex",
-                "mismatch": ["ea", "et"]
+            "[-a-z]": {
+                "match": "-",
+                "mismatch": ["1", "B"]
             },
             "[A-Z]": {
                 "match": "Z",
@@ -426,40 +426,40 @@
                 "mismatch": ["a", "x"]
             },
             "\\d+": {
-                "match": "12345",
-                "mismatch": ["abc", "none"]
+                "match": "5",
+                "mismatch": ["abc", "l"]
             },
-            "1\\d1": {
-                "match": "151",
-                "mismatch": ["111", "1212"]
+            "1\\da": {
+                "match": "1a",
+                "mismatch": ["#a", "1b"]
             },
             "code\\d": {
                 "match": "code9",
                 "mismatch": ["code", "codex"]
             },
-            "\\d\\d\\d": {
-                "match": "007",
-                "mismatch": ["00", "0123"]
+            "£\\d": {
+                "match": "£5",
+                "mismatch": ["5£", "£five"]
             },
-            "year\\d{4}": {
-                "match": "year2024",
-                "mismatch": ["year202", "year24"]
+            "\\d million": {
+                "match": "3 million",
+                "mismatch": ["ten million", "null million"]
             },
-            "A\\dA": {
-                "match": "A2A",
-                "mismatch": ["AAA", "A22A"]
+            "\\d to \\d": {
+                "match": "1 to 1",
+                "mismatch": ["one-one", "1-1"]
             },
-            "\\d%": {
-                "match": "5%",
-                "mismatch": ["%", "percent"]
+            "\\dall": {
+                "match": "4all",
+                "mismatch": ["tall", "call"]
             },
-            "No.\\d": {
-                "match": "No.1",
-                "mismatch": ["No.", "Number1"]
+            "No\\d": {
+                "match": "No1",
+                "mismatch": ["N1", "Number1"]
             },
-            "zip\\d{5}": {
-                "match": "zip12345",
-                "mismatch": ["zip1234", "zip123456"]
+            "1\\d": {
+                "match": "11",
+                "mismatch": ["1a", "1"]
             }
         }
     },
