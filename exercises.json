@@ -187,12 +187,12 @@
         "lesson": "+",
         "explanation": "The plus symbol (+) matches one or more occurrences of the preceding element.",
         "examples": {
-            "a+b": {
-                "match": "aab",
-                "mismatch": ["ab", "acb"]
+            "10+": {
+                "match": "10",
+                "mismatch": ["1", "01"]
             },
-            "bo+d": {
-                "match": "boood",
+            "bo+l": {
+                "match": "bool",
                 "mismatch": ["bd", "bod"]
             },
             "ba+": {
@@ -203,29 +203,29 @@
                 "match": "37",
                 "mismatch": ["357", "3"]
             },
-            "#+#": {
-                "match": "#++#",
-                "mismatch": ["##", "#a#"]
+            "#+": {
+                "match": "######",
+                "mismatch": [" ", "a"]
             },
-            "xyz+": {
-                "match": "xyzzz",
-                "mismatch": ["xyz", "xyyz"]
+            "10+": {
+                "match": "100",
+                "mismatch": ["1", "0"]
             },
             "123+": {
                 "match": "1233",
-                "mismatch": ["123", "1234123"]
+                "mismatch": ["12", "33321"]
             },
             "@+": {
-                "match": "@@@",
-                "mismatch": ["@", "@a@"]
+                "match": "@_@",
+                "mismatch": ["-_-", ":D"]
             },
-            "foo+": {
-                "match": "foooo",
-                "mismatch": ["foo", "foob"]
+            "bo+t": {
+                "match": "boot",
+                "mismatch": ["boo", "bat"]
             },
-            "%+": {
-                "match": "%%%%",
-                "mismatch": ["%", "%a%"]
+            "bo+t": {
+                "match": "bot",
+                "mismatch": ["bt", "bit"]
             }
         }
     },
