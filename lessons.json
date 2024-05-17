@@ -1,6 +1,19 @@
 {
-    "level1": {
+    "level1":{
         "title": "Level 1",
+        "symbol": "characters",
+        "description": [
+            "A regular expression (regex) is a sequence of characters that define a search pattern.",
+            "For example, the regex wow will match text containing the letter w, followed by o, followed by w.",
+            "Regex is case-sensitive, so 'a' will not match 'A'."
+        ],
+        "examples": [
+            "abc will match 'abc'.",
+            "abc will not match 'ABC'."
+        ]
+    },
+    "level2": {
+        "title": "Level 2",
         "symbol": "^",
         "description": [
             "The caret symbol (^) is used to match the beginning of a string.",
@@ -11,8 +24,8 @@
             "^dog will not match 'hotdog', 'underdog', etc."
         ]
     },
-    "level2": {
-        "title": "Level 2",
+    "level3": {
+        "title": "Level 3",
         "symbol": "$",
         "description": [
             "The dollar symbol ($) is used to match the end of a string.",
@@ -23,8 +36,8 @@
             "dog$ will not match 'doggy', 'doghouse', etc."
         ]
     },
-    "level3": {
-        "title": "Level 3",
+    "level4": {
+        "title": "Level 4",
         "symbol": ".",
         "description": [
             "The dot symbol (.) matches any single character except newline.",
@@ -35,8 +48,8 @@
             "c.t will not match 'caterpillar', 'ct', etc."
         ]
     },
-    "level4": {
-        "title": "Level 4",
+    "level5": {
+        "title": "Level 5",
         "symbol": "*",
         "description": [
             "The asterisk symbol (*) matches zero or more occurrences of the preceding element.",
@@ -47,8 +60,8 @@
             "ca*t will not match 'cabt', 'caaaatx', etc."
         ]
     },
-    "level5": {
-        "title": "Level 5",
+    "level6": {
+        "title": "Level 6",
         "symbol": "+",
         "description": [
             "The plus symbol (+) matches one or more occurrences of the preceding element.",
@@ -59,8 +72,8 @@
             "ca+t will not match 'ct', 'c', etc."
         ]
     },
-    "level6": {
-        "title": "Level 6",
+    "level7": {
+        "title": "Level 7",
         "symbol": "?",
         "description": [
             "The question mark symbol (?) matches zero or one occurrence of the preceding element.",
@@ -71,8 +84,8 @@
             "ca?t will not match 'caaat'."
         ]
     },
-    "level7": {
-        "title": "Level 7",
+    "level8": {
+        "title": "Level 8",
         "symbol": "[ ]",
         "description": [
             "Square brackets ([ ]) are used to define a character class.",
@@ -89,8 +102,8 @@
             "[-abc] will match '-', 'a', 'b', 'c'."
         ]
     },
-    "level8": {
-        "title": "Level 8",
+    "level9": {
+        "title": "Level 9",
         "symbol": "|",
         "description": [
             "The pipe symbol (|) is used for alternation (logical OR).",
@@ -101,8 +114,8 @@
             "cat|dog will not match 'bat', 'pig', etc."
         ]
     },
-    "level9": {
-        "title": "Level 9",
+    "level10": {
+        "title": "Level 10",
         "symbol": "\\d",
         "description": [
             "The \\d symbol matches any digit (equivalent to [0-9]).",
@@ -113,8 +126,8 @@
             "\\d will not match 'a', 'b', 'c', etc."
         ]
     },
-    "level10": {
-        "title": "Level 10",
+    "level11": {
+        "title": "Level 11",
         "symbol": "\\w",
         "description": [
             "The \\w symbol matches any word character (alphanumeric and underscore).",
@@ -125,8 +138,8 @@
             "\\w will not match '@', '#', '$', etc."
         ]
     },
-    "level11": {
-        "title": "Level 11",
+    "level12": {
+        "title": "Level 12",
         "symbol": "\\W",
         "description": [
             "The \\W symbol matches any non-word character.",
@@ -137,8 +150,8 @@
             "\\W will not match 'a', 'b', 'c', '1', '2', '_', etc."
         ]
     },
-    "level12": {
-        "title": "Level 12",
+    "level13": {
+        "title": "Level 13",
         "symbol": "\\s",
         "description": [
             "The \\s symbol matches any whitespace character (spaces, tabs, line breaks).",
@@ -149,8 +162,8 @@
             "\\s will not match 'a', '1', '@', etc."
         ]
     },
-    "level13": {
-        "title": "Level 13",
+    "level14": {
+        "title": "Level 14",
         "symbol": "\\S",
         "description": [
             "The \\S symbol matches any non-whitespace character.",
@@ -161,8 +174,8 @@
             "\\S will not match ' ', '\\t', '\\n', etc."
         ]
     },
-    "level14": {
-        "title": "Level 14",
+    "level15": {
+        "title": "Level 15",
         "symbol": "\\b",
         "description": [
             "The \\b symbol matches a word boundary.",
@@ -173,8 +186,8 @@
             "\\bword will not match 'sword', 'wordy' in 'keyboard'."
         ]
     },
-    "level15": {
-        "title": "Level 15",
+    "level16": {
+        "title": "Level 16",
         "symbol": "\\B",
         "description": [
             "The \\B symbol matches a non-word boundary.",
@@ -185,8 +198,8 @@
             "\\Bword\\B will not match 'word', 'world'."
         ]
     },
-    "level16": {
-        "title": "Level 16",
+    "level17": {
+        "title": "Level 17",
         "symbol": "{n}",
         "description": [
             "The {n} symbol matches exactly n occurrences of the preceding element.",
@@ -197,8 +210,8 @@
             "a{3} will not match 'aa', 'aaaa'."
         ]
     },
-    "level17": {
-        "title": "Level 17",
+    "level18": {
+        "title": "Level 18",
         "symbol": "{n,}",
         "description": [
             "The {n,} symbol matches at least n occurrences of the preceding element.",
@@ -209,8 +222,8 @@
             "a{2,} will not match 'a'."
         ]
     },
-    "level18": {
-        "title": "Level 18",
+    "level19": {
+        "title": "Level 19",
         "symbol": "{n,m}",
         "description": [
             "The {n,m} symbol matches between n and m occurrences of the preceding element.",
@@ -221,8 +234,8 @@
             "a{2,4} will not match 'a', 'aaaaa'."
         ]
     },
-    "level19": {
-        "title": "Level 19",
+    "level20": {
+        "title": "Level 20",
         "symbol": "(group)",
         "description": [
             "Parentheses (()) are used to create groups.",
@@ -233,8 +246,8 @@
             "(abc) will not match 'ab', 'abcd'."
         ]
     },
-    "level20": {
-        "title": "Level 20",
+    "level21": {
+        "title": "Level 21",
         "symbol": "(?:group)",
         "description": [
             "The (?:) syntax creates a non-capturing group.",

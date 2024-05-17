@@ -1,5 +1,55 @@
 {
-    "level 1" : {
+    "level 1": {
+        "lesson": "abcABC",
+        "explanation": "Regex is case-sensitive",
+        "examples": {
+            "abc": {
+                "match": "abc",
+                "mismatch": ["ABC", "Abc"]
+            },
+            "1a": {
+                "match": "1a",
+                "mismatch": ["1A", "1b"]
+            },
+            "Hello": {
+                "match": "Hello",
+                "mismatch": ["hello", "HeLlO"]
+            },
+            "WORLD": {
+                "match": "WORLD",
+                "mismatch": ["W0RLD", "WoRLD"]
+            },
+            "cat": {
+                "match": "cat",
+                "mismatch": ["Cat", "kat"]
+            },
+            "Integer": {
+                "match": "Integer",
+                "mismatch": ["integer", "int"]
+            },
+            "Bills bill": {
+                "match": "Bills bill",
+                "mismatch": ["bills Bill", "bills bill"]
+            },
+            "file": {
+                "match": "file",
+                "mismatch": ["File", "fIle"]
+            },
+            "O_o": {
+                "match": "O_o",
+                "mismatch": ["O_O", "o_o"]
+            },
+            "className": {
+                "match": "className",
+                "mismatch": ["classname", "ClassName"]
+            },
+            "x": {
+                "match": "x",
+                "mismatch": ["X", "y"]
+            }
+        }
+    }
+    ,"level 2" : {
         "lesson" : "^",
         "explanation" : "The caret symbol (^) is used to match the beginning of a string.",
         "examples" : {
@@ -45,7 +95,7 @@
             }
         }    
     },
-    "level 2": {
+    "level 3": {
         "lesson": "$",
         "explanation": "The dollar symbol ($) is used to match the end of a string.",
         "examples": {
@@ -91,7 +141,7 @@
             }
         }
     },
-    "level 3": {
+    "level 4": {
         "lesson": ".",
         "explanation": "The dot symbol (.) matches any single character except newline.",
         "examples": {
@@ -137,7 +187,7 @@
             }
         }
     },
-    "level 4": {
+    "level 5": {
         "lesson": "*",
         "explanation": "The asterisk symbol (*) matches zero or more occurrences of the preceding element.",
         "examples": {
@@ -183,7 +233,7 @@
             }
         }
     },
-    "level 5": {
+    "level 6": {
         "lesson": "+",
         "explanation": "The plus symbol (+) matches one or more occurrences of the preceding element.",
         "examples": {
@@ -229,7 +279,7 @@
             }
         }
     },
-    "level 6": {
+    "level 7": {
         "lesson": "?",
         "explanation": "The question mark symbol (?) matches zero or one occurrence of the preceding element.",
         "examples": {
@@ -275,7 +325,7 @@
             }
         }
     },
-    "level 7": {
+    "level 8": {
         "lesson": "[]",
         "explanation": "Square brackets ([]) are used to define a character class, allowing any single character from a specified set.",
         "examples": {
@@ -321,7 +371,7 @@
             }
         }
     },
-    "level 8": {
+    "level 9": {
         "lesson": "|",
         "explanation": "The pipe symbol (|) is used for alternation (logical OR), allowing a match against any one of the expressions separated by the pipe.",
         "examples": {
@@ -339,7 +389,7 @@
             },
             "1|2": {
                 "match": "2",
-                "mismatch": ["12", "3"]
+                "mismatch": [" ", "3"]
             },
             "left|right": {
                 "match": "left",
@@ -357,17 +407,17 @@
                 "match": "high",
                 "mismatch": ["medium", "average"]
             },
-            "man|woman": {
-                "match": "woman",
-                "mismatch": ["boy", "girl"]
+            "A|B": {
+                "match": "A",
+                "mismatch": ["a", "b"]
             },
             "on|off": {
                 "match": "on",
-                "mismatch": ["none", "in"]
+                "mismatch": ["o", "in"]
             }
         }
     },
-    "level 9": {
+    "level 10": {
         "lesson": "\\d",
         "explanation": "The backslash-d (\\d) symbol matches any digit, which is equivalent to [0-9].",
         "examples": {
@@ -413,7 +463,7 @@
             }
         }
     },
-    "level 10": {
+    "level 11": {
         "lesson": "\\w",
         "explanation": "The backslash-w (\\w) symbol matches any word character, including letters, digits, and the underscore, equivalent to [a-zA-Z0-9_].",
         "examples": {
@@ -459,7 +509,7 @@
             }
         }
     },
-     "level 11": {
+     "level 12": {
         "lesson": "\\W",
         "explanation": "The backslash-W (\\W) symbol matches any non-word character, which includes punctuation, spaces, and other symbols not part of [a-zA-Z0-9_].",
         "examples": {
@@ -505,7 +555,7 @@
             }
         }
     },
-    "level 12": {
+    "level 13": {
         "lesson": "\\s",
         "explanation": "The backslash-s (\\s) symbol matches any whitespace character, including spaces, tabs, and newline characters.",
         "examples": {
@@ -551,7 +601,7 @@
             }
         }
     },
-    "level 13": {
+    "level 14": {
         "lesson": "\\S",
         "explanation": "The backslash-S (\\S) symbol matches any non-whitespace character, which includes letters, digits, punctuation, and other symbols.",
         "examples": {
@@ -597,7 +647,7 @@
             }
         }
     },
-    "level 14": {
+    "level 15": {
         "lesson": "\\b",
         "explanation": "The backslash-b (\\b) symbol matches a word boundary. This includes spaces, punctuation, and the edges of a string if they border word characters.",
         "examples": {
@@ -643,7 +693,7 @@
             }
         }
     },
-    "level 15": {
+    "level 16": {
         "lesson": "\\B",
         "explanation": "The backslash-B (\\B) symbol matches a position where there is not a word boundary. It is used to find matches within the interiors of words.",
         "examples": {
@@ -689,7 +739,7 @@
             }
         }
     },
-     "level 16": {
+     "level 17": {
         "lesson": "{n}",
         "explanation": "The curly braces {n} symbol is used to specify exactly n occurrences of the preceding element.",
         "examples": {
@@ -735,7 +785,7 @@
             }
         }
     },
-    "level 17": {
+    "level 18": {
         "lesson": "{n,}",
         "explanation": "The curly braces {n,} symbol is used to specify that the preceding element must appear at least n times.",
         "examples": {
@@ -781,7 +831,7 @@
             }
         }
     },
-    "level 18": {
+    "level 19": {
         "lesson": "{n,m}",
         "explanation": "The curly braces {n,m} symbol is used to specify that the preceding element must appear at least n times but no more than m times.",
         "examples": {
@@ -827,7 +877,7 @@
             }
         }
     },
-     "level 19": {
+     "level 20": {
         "lesson": "(group)",
         "explanation": "Parentheses (()) are used to create capture groups in regular expressions. This allows parts of the pattern to be used as a unit for applying quantifiers or for capturing matches for further processing.",
         "examples": {
@@ -873,7 +923,7 @@
             }
         }
     },
-    "level 20": {
+    "level 21": {
         "lesson": "(?:group)",
         "explanation": "The (?:...) syntax creates a non-capturing group in regular expressions. This allows you to group elements together to apply quantifiers or other operations without capturing the group for back-referencing, optimizing performance when you don’t need to extract data.",
         "examples": {
