@@ -77,9 +77,10 @@ window.onload = function() {
         currentMismatch = data.mismatch;
         const correctButton = Math.floor(Math.random() * 3);
         [btn1, btn2, btn3][correctButton].innerText = currentMatch;
-        [btn1, btn2, btn3].filter((_, i) => i !== correctButton).forEach(btn => {
-            btn.innerText = data.mismatch[Math.floor(Math.random() * data.mismatch.length)];
-        });
+        
+        const mismatchButtons = [btn1, btn2, btn3].filter((_, i) => i !== correctButton);
+        mismatchButtons[0].innerText = data.mismatch[0];
+        mismatchButtons[1].innerText = data.mismatch[1];
         createBlock(data.regex);
     }
 
