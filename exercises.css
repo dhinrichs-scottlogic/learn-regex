@@ -16,11 +16,10 @@ body {
 }
 
 .selection-buttons {
-    padding: 0.5em 1em;
+    padding: 0.2em;
     font-size: 1.5em;
-    width: 9em;
-    min-height: 2.5em;
-    border: 1.5px solid #bbb;
+    width: fit-content;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,64 +93,65 @@ body {
     padding: 0.2em 0.8em;
     border: outset 4px #333;
     box-shadow: inset 0 0 3px #111;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
     border-radius: 4%;
     font-family: 'Lucida Console', Geneva, Helvetica, Arial, sans-serif;
     color: white;
     background:  linear-gradient(140deg, #555, #444, #333, #222, #666, #111);   
     font-size: 1.2rem;
+    opacity: 0.8;
 }
 
 #game-over {
-    width: 50vw;
-    height: 30vh;
-    background-color: #ddd;
-    border: 0.24em solid rgb(196, 21, 101);
-    margin-left: auto;
-    margin-right: auto;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: #E7E7E7;
+    border-top: 0.24em solid rgba(196, 21, 100, 0.7);
+    border-bottom: 0.24em solid rgba(196, 21, 100, 0.7);
+    position: absolute;
+    top: 30vh;
+    width: 100vw;
     display: none;
     justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    box-shadow: rgba(196, 21, 101, 0.1) 10px 10px, rgba(196, 21, 101, 0.1) 20px 20px;
-    z-index: 1;
-    position: absolute;
-    top: 20vh;
-    left: 25vw;
+    padding: 2em 0;
+    font-size: 2rem;
 }
 
 #success-message {
-    width: 50vw;
-    height: 30vh;
-    background-color: #C7FFC7;;
-    margin-left: auto;
-    margin-right: auto;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: #E7E7E7;
+    border-top: 0.24em solid #C7FFC7;
+    border-bottom: 0.24em solid #C7FFC7;
+    position: absolute;
+    top: 30vh;
+    width: 100vw;
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    box-shadow: rgba(0, 255, 0, 0.1) 10px 10px, rgba(0, 255, 0, 0.1) 20px 20px;
-    z-index: 1;
-    position: absolute;
-    top: 20vh;
-    left: 25vw;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+#success-message p {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
 }
 
 .next-level {
-    font-size: 0.5;
-    background-color: #C7FFC7;
-    border: 3px double #B7EFB7;
-    width: 50%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: fit-content;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
 }
 
 .next-level:hover {
-    background-color: #B7EFB7;
+    background-color: #C7FFC7;
 }
+
 
 #back-link {
     background-color: #D7D7D7;
