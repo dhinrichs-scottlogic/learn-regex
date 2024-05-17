@@ -215,17 +215,17 @@
                 "match": "1233",
                 "mismatch": ["12", "33321"]
             },
-            "@+": {
-                "match": "@_@",
-                "mismatch": ["-_-", ":D"]
+            "wo+l": {
+                "match": "wool",
+                "mismatch": ["wl", "owl"]
             },
             "bo+t": {
                 "match": "boot",
                 "mismatch": ["boo", "bat"]
             },
-            "bo+t": {
-                "match": "bot",
-                "mismatch": ["bt", "bit"]
+            "ca+t": {
+                "match": "cat",
+                "mismatch": ["ct", "cut"]
             }
         }
     },
@@ -237,41 +237,41 @@
                 "match": "ab",
                 "mismatch": ["aab", "bb"]
             },
-            "bo?d": {
-                "match": "bd",
-                "mismatch": ["bod", "bood"]
+            "bo?m": {
+                "match": "bm",
+                "mismatch": ["bold", "boom"]
             },
-            ".a?": {
-                "match": ".a",
-                "mismatch": [".aa", ".aaa"]
+            "10?1": {
+                "match": "11",
+                "mismatch": ["1001", "01"]
             },
-            "3?7": {
-                "match": "37",
-                "mismatch": ["377", "3"]
+            "20?2": {
+                "match": "202",
+                "mismatch": ["2002", "200002"]
             },
-            "#?#": {
-                "match": "##",
-                "mismatch": ["#", "#a#"]
+            "le?t": {
+                "match": "let",
+                "mismatch": ["lit", "leet"]
             },
-            "xyz?": {
-                "match": "xyz",
-                "mismatch": ["xyzz", "xy"]
+            "AB?A": {
+                "match": "AA",
+                "mismatch": ["ABBA", "BAA"]
             },
-            "123?": {
-                "match": "123",
-                "mismatch": ["1233", "12"]
+            "a?haha": {
+                "match": "haha",
+                "mismatch": ["aah", "hahaha"]
             },
-            "@?": {
-                "match": "@",
-                "mismatch": ["@@", "a@"]
+            "0?1": {
+                "match": "1",
+                "mismatch": ["00", "1001"]
             },
-            "foo?": {
-                "match": "foo",
-                "mismatch": ["fooo", "fo"]
+            "10,?000 ": {
+                "match": "10000",
+                "mismatch": ["10,,000", "1,00"]
             },
-            "%?": {
-                "match": "%",
-                "mismatch": ["%%", "%%5"]
+            "39,?000": {
+                "match": "39000",
+                "mismatch": ["3,9", "39.000"]
             }
         }
     },
