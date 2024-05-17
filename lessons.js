@@ -49,6 +49,7 @@ async function initGame() {
 
     // Create the exercise link dynamically
     const exerciseLink = createElement('a', 'START');
+    exerciseLink.className = 'start-link';
     exerciseLink.href = `exercises.html?level=${level}`;
     lessonsContent.appendChild(exerciseLink);
 
@@ -56,7 +57,7 @@ async function initGame() {
     // create 20 links for the other lessons
     for (let i = 1; i <= 20; i++) {
         const lessonLink = createElement('a', `level ${i}`);
-                // make the text content of the link the symbol of the lesson
+        lessonLink.className = 'lesson-link';
         if (data[`level${i}`]) {
             lessonLink.textContent = data[`level${i}`].symbol;
         }

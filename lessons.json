@@ -76,11 +76,17 @@
         "symbol": "[ ]",
         "description": [
             "Square brackets ([ ]) are used to define a character class.",
-            "For example, the regex [aeiou] will match any vowel."
+            "For example, the regex [aeiou] will match any vowel.",
+            "The minus sign (-) is often used together with the square brackets to define a range of characters.", 
+            "For example, [a-z] will match any lowercase letter from 'a' to 'z'.",
+            "If the - sign is the first or last character in the square brackets, it will be treated as a literal character.",
+            "For example, [-abc] will match '-', 'a', 'b', or 'c'."
         ],
         "examples": [
             "[aeiou] will match 'a', 'e', 'i', 'o', 'u'.",
-            "[aeiou] will not match 'b', 'c', 'd', etc."
+            "[aeiou] will not match 'b', 'c', 'd', etc.",
+            "[a-z] will match 'a', 'b', 'c', etc.",
+            "[-abc] will match '-', 'a', 'b', 'c'."
         ]
     },
     "level8": {
